@@ -17,7 +17,7 @@ import ReactDOM from 'react-dom'
 // So you can create a react element for the component you're testing:
 import ItemList from '../item-list'
 
-test('title', () => {
+test('renders "no items" when no ITEMS ARE GIVEN', () => {
   const container = document.createElement('div')
   ReactDOM.render(<ItemList items={[]} />, container)
   expect(container.textContent).toMatch('no items')
