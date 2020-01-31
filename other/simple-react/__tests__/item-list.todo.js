@@ -20,7 +20,7 @@ import ItemList from '../item-list'
 test('title', () => {
   const container = document.createElement('div')
   ReactDOM.render(<ItemList items={[]} />, container)
-  expect(container.innerHTML).toBe('no items')
+  expect(container.textContent).toMatch('no items')
 })
 
 // and here's an outline example of your first test:
