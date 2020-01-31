@@ -23,6 +23,14 @@ test('renders "no items" when no ITEMS ARE GIVEN', () => {
   expect(container.textContent).toMatch('no items')
 })
 
+test('renders the items given', () => {
+  const container = document.createElement('div')
+  ReactDOM.render(<ItemList items={['apple,orange,pear']} />, container)
+  expect(container.textContent).toMatch('apple')
+  expect(container.textContent).toMatch('orange')
+  expect(container.textContent).toMatch('pear')
+})
+
 // and here's an outline example of your first test:
 //   Create a "container" to render your component into (tip: use document.createElement('div'))
 //
